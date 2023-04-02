@@ -20,8 +20,8 @@ class StateMachine {
 
 const sm = new StateMachine({
 	S0: { A: 'S1', B: 'S2', C: 'S1' },
-	S1: { A: 'S0', B: 'S4' },
-	S2: { A: 'S0', B: 'S3' },
+	S1: { A: 'S0', C: 'S4' },
+	S2: { B: 'S0', C: 'S3' },
 	S3: { A: 'S2', B: 'S4', C: 'S0' },
 	S4: {},
 })
