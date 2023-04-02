@@ -23,7 +23,7 @@ const sm = new StateMachine({
 	S1: { A: 'S0', C: 'S4' },
 	S2: { B: 'S0', C: 'S3' },
 	S3: { A: 'S2', B: 'S4', C: 'S0' },
-	S4: {},
+	S4: { A: 'S3', C: 'S0' },
 })
 
-sm.input('AABCB')
+sm.input('ACABCB')
