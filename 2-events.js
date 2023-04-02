@@ -20,15 +20,14 @@ function step() {
 			state = STATE_WORK
 			break
 		case STATE_WORK:
-			console.log('working')
-			state = STATE_FIN
+			process.stdout.write('.')
 			break
 		case STATE_FIN:
-			console.log('finalization')
+			console.log('\nfinalization')
 			state = STATE_EXIT
 			break
 		case STATE_EXIT:
 			console.log('exit')
-			process.exit(0)
+			clearInterval(timer)
 	}
 }
